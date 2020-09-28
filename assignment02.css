@@ -13,6 +13,30 @@ body{
   text-indent: 10px;
 }
 
+div {
+  margin-bottom: 50px;
+}
+
+span {
+  width: 100px;
+  height: 50px;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  border: 5px solid red;
+  background-color: yellow;
+}
+
+div.a {
+  word-wrap: normal;
+}
+
+img[alt="cat icon"] {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
 
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
