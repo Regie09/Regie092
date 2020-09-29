@@ -32,8 +32,16 @@ div.a {
   word-wrap: normal;
 }
 
+div.b{
+  word-warp: 
+}
+
+div.c{
+  
+}
+
 img[alt="cat icon"] {
-  position: absolute;
+  position: fixed;
   bottom: 8px;
   right: 16px;
 }
