@@ -37,7 +37,7 @@ span.b{
 }
 
 span.c{
-  position: fixed;
+  position: sticky;
 }
 
 img[alt="cat icon"] {
