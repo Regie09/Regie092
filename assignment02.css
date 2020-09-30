@@ -58,6 +58,17 @@ img[alt="bird icon"]{
   top: 250px;
 }
 
+.topnav{
+  position: fixed;
+  background-color: green;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
   background-color: gray;
