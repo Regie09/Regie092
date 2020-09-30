@@ -54,8 +54,8 @@ img[alt="dog icon"]{
 
 img[alt="bird icon"]{
   position: relative;
-  left: 50px;
-  top: 250px;
+  left: 250px;
+  top: 50px;
 }
 
 .topnav{
