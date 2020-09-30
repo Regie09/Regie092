@@ -70,22 +70,22 @@ img[alt="bird icon"]{
 }
 
 /* --- pre-existing css --- */
-.stripey tr:nth-child(even) {
+tr:nth-child(even) {
   background-color: gray;
 }
-.stripey tr:nth-child(odd) {
+tr:nth-child(odd) {
   background-color: white;
 }
-.stripey th {
+th {
   color: white;
   background-color: black;
 }
-.mousey td:hover {
+td:hover {
   background-color: yellow;
 }
-.rightey td {
+td {
   text-align: right;
 }
-input[type="text"].pinkey:focus {
+input:focus {
   background-color: pink;
 }
