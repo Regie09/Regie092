@@ -122,7 +122,7 @@ function resetAllClubDistances() {
 	let str = JSON.stringify(clubs);
 	localStorage.setItem("clubs", str);
 	// and refresh screen
-	window.location.href = "clubDistanceList.html"; 
+	window.location.href = "assignment04.html"; 
 }
 
 // navigate to "About" screen
@@ -201,7 +201,7 @@ function updateStats(shotDistance=0) {
 		str = JSON.stringify(clubs);
 		localStorage.setItem("clubs", str);
 		// return to list screen
-		window.location.href = "clubDistanceList.html"; 
+		window.location.href = "assignment04.html"; 
 	}
 }
 
