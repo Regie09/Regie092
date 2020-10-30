@@ -12,6 +12,15 @@ document.getElementById("1A").innerHTML = person.fullName();
 // add properties, streetAddress, city, state, zipCode
 // add method, fullAddress(), which prints full address on a single line.
 // Display output of fullAddress() in <div id="1B">
+let streetAddress = {
+  address: "7400 Bay Rd",
+  city: "Saginaw",
+  state: "MI",
+  zipcode: 48710,
+  fullAddress: function() {return this.address + ", " + streetAddress.city + ", " + streetAddress.state + " " + streetAddress.zipcode }
+}
+  document.getElementById("1B").innerHTML = streetAddress.fullAddress();
+
 person.streetAddress = "123 Main Street";
 
 // ==================
@@ -31,6 +40,16 @@ appendTableRow3(table2a,"7","8","9");
 // create a 5-row by 5-column table showing the numbers, 1 through 25
 // put borders around the cells, too, not just around the edge of the table
 // Display output in <div id="2B">
+let div2b = document.getElementById("2B");
+let table2b = createTable("table2b");
+div2b.appendChild(table2b);
+table2b.setAttribute("style", "border:1px solid black;")
+table2b.setAttribute("width", "100%")
+appendTableRow5(table2b,"1","2","3","4","5");
+appendTableRow5(table2b,"6","7","8","9","10");
+appendTableRow5(table2b,"11","12","13","14","15");
+appendTableRow5(table2b,"16","17","18","19","20");
+appendTableRow5(table2b,"21","22","23","24","25");
 
 // ==================
 
@@ -41,6 +60,8 @@ appendTableRow3(table2a,"7","8","9");
 // Use table03A to create table3B. Create new functions as in item 2, above. 
 // in table3B, add a column, "Price * Qty", and use JS to compute the correct values to put in the column
 // add to table03B a "totals" row which gives the "grand total" of all numbers in the "Price * Qty" column
+
+
 
 
 // 9. Revise a non-object-oriented HTML form. Make it so the field in focus displays *only* its own error (not the errors of all the other fields), however, if the user clicks the "validate" button, then display all errors.
