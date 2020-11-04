@@ -51,6 +51,52 @@ appendTableRow5(table2b,"11","12","13","14","15");
 appendTableRow5(table2b,"16","17","18","19","20");
 appendTableRow5(table2b,"21","22","23","24","25");
 
+function createTable(id) {
+  // create "table" element
+  let table = document.createElement("table");
+  // set id
+  table.setAttribute("id", id);
+  // set bootstrap classes
+  table.setAttribute("class", "table table-striped");
+  // create a "tbody" element
+  let tbody = document.createElement("tbody");
+  // append tbody to table
+  table.appendChild(tbody);
+  // return the table
+  return table;
+}
+
+function appendTableRow (tableobj, colType, col1, col2, col3, col4, col5) {
+  // create text nodes
+  let text1  = document.createTextNode(col1);
+  let text2  = document.createTextNode(col2);
+  let text3  = document.createTextNode(col3);
+  let text4  = document.createTextNode(col4);
+  let text5  = document.createTextNode(col5);
+  // create table divisions, "td" or "th"
+  let td1    = document.createElement(colType);
+  let td2    = document.createElement(colType);
+  let td3    = document.createElement(colType);
+  let td4    = document.createElement(colType);
+  let td5    = document.createElement(colType);
+  // append text nodes to table divisions (columns)
+  td1.appendChild(text1);
+  td2.appendChild(text2);
+  td3.appendChild(text3);
+  td4.appendChild(text4);
+  td5.appendChild(text5);
+  // create table row
+  let tr    = document.createElement("tr");
+  // append table divisions (columns) to table row
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tr.appendChild(td3);
+  tr.appendChild(td4);
+  tr.appendChild(td5);
+  // append the row to the tbody element in the table
+  tableobj.children[0].appendChild(tr);
+}
+
 // ==================
 
 // 8. create "totals" row and column in a table
@@ -60,7 +106,60 @@ appendTableRow5(table2b,"21","22","23","24","25");
 // Use table03A to create table3B. Create new functions as in item 2, above. 
 // in table3B, add a column, "Price * Qty", and use JS to compute the correct values to put in the column
 // add to table03B a "totals" row which gives the "grand total" of all numbers in the "Price * Qty" column
+let table03B = document.getElementById("table03B");
 
+let arr00 = create2dArray(table03B);
+
+let totalsRow = createTotalsRow(arr00);
+
+appendTableRow(table03B, "td", totalsRow[0], totalsRow[1], totalsRow[2]);
+
+function create2dArray(table03B){
+  let arr = [];
+  let rows = table03B.children[0].children.lenght;
+  let cols = table03B.children[0].children[0].children.lenght;
+  for(let i=0; i<rows; i++){
+    arr[i] = [];
+    for(let j=0; j<cols; j++){
+      arr[i][j] = table03B.children[0].children[i].children[j].innerHTML;
+    }
+  }
+  return arr;
+}
+
+function createTotalsRow(table03B){
+  let totalsRow = ["Total", 0, 0];
+  let rows = table03B.lenght;
+  let cols = table03B[0].lenght;
+  for(let i=1; i<rows; i++){
+    for(let j=1; j<cols; j++){
+      totalsRow[j] += Number.parseFloat(table03B[i][j]);
+    }
+  }
+  return totalsRow;
+}
+
+function appendTableRow(tableobj, colType, col1, col2, col3){
+  let text1 = document.createTextNode(col1);
+  let text2 = document.createTextNode(col2);
+  let text3 = document.createTextNode(col3);
+  
+  let td1 = document.createElement(colType);
+  let td2 = document.createElement(colType);
+  let td3 = document.createElement(colType);
+  
+  td1.appendChild(text1);
+  td2.appendChild(text2);
+  td3.appendChild(text3);
+  
+  let tr = document.createElement("tr");
+  
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tr.appendChild(td3);
+  
+  tableobj.children[0].appendChild(tr);
+}
 
 
 
