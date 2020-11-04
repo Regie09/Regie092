@@ -45,11 +45,11 @@ let table2b = createTable("table2b");
 div2b.appendChild(table2b);
 table2b.setAttribute("style", "border:1px solid black;")
 table2b.setAttribute("width", "100%")
-appendTableRow5(table2b,"1","2","3","4","5");
-appendTableRow5(table2b,"6","7","8","9","10");
-appendTableRow5(table2b,"11","12","13","14","15");
-appendTableRow5(table2b,"16","17","18","19","20");
-appendTableRow5(table2b,"21","22","23","24","25");
+appendTableRow5(table2b, "td","1","2","3","4","5");
+appendTableRow5(table2b, "td","6","7","8","9","10");
+appendTableRow5(table2b, "td","11","12","13","14","15");
+appendTableRow5(table2b, "td","16","17","18","19","20");
+appendTableRow5(table2b, "td","21","22","23","24","25");
 
 function createTable(id) {
   let table = document.createElement("table");
