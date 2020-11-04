@@ -52,48 +52,41 @@ appendTableRow5(table2b,"16","17","18","19","20");
 appendTableRow5(table2b,"21","22","23","24","25");
 
 function createTable(id) {
-  // create "table" element
   let table = document.createElement("table");
-  // set id
   table.setAttribute("id", id);
-  // set bootstrap classes
   table.setAttribute("class", "table table-striped");
-  // create a "tbody" element
   let tbody = document.createElement("tbody");
-  // append tbody to table
   table.appendChild(tbody);
-  // return the table
   return table;
 }
 
 function appendTableRow (tableobj, colType, col1, col2, col3, col4, col5) {
-  // create text nodes
   let text1  = document.createTextNode(col1);
   let text2  = document.createTextNode(col2);
   let text3  = document.createTextNode(col3);
   let text4  = document.createTextNode(col4);
   let text5  = document.createTextNode(col5);
-  // create table divisions, "td" or "th"
+  
   let td1    = document.createElement(colType);
   let td2    = document.createElement(colType);
   let td3    = document.createElement(colType);
   let td4    = document.createElement(colType);
   let td5    = document.createElement(colType);
-  // append text nodes to table divisions (columns)
+
   td1.appendChild(text1);
   td2.appendChild(text2);
   td3.appendChild(text3);
   td4.appendChild(text4);
   td5.appendChild(text5);
-  // create table row
+
   let tr    = document.createElement("tr");
-  // append table divisions (columns) to table row
+
   tr.appendChild(td1);
   tr.appendChild(td2);
   tr.appendChild(td3);
   tr.appendChild(td4);
   tr.appendChild(td5);
-  // append the row to the tbody element in the table
+
   tableobj.children[0].appendChild(tr);
 }
 
