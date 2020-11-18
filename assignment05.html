@@ -80,6 +80,10 @@ var chartData = {
       label: 'oranges',
       data: [2, 29, 5, 5, 2, 3, 10],
       backgroundColor: "rgba(255,140,0,0.4)"
+    }, {
+      label: 'coconut',
+      data: [3, 2, 5, 13, 12, 3, 10],
+      backgroundColor: "rgba(255,140,0,0.4)"
     }]
   },
   options: {
@@ -149,10 +153,14 @@ function loadContent() {
         = "rgba(100,100,100,0.4)"; // gray
       chartData.data.datasets[1].backgroundColor 
         = "rgba(255,0,0,0.4)"; // red
+      chartData.data.datasets[2].backgroundColor 
+        = "rgba(0,255,0,0.4)"; //green
       chartData.data.datasets[0].label  
         = 'total cases';
       chartData.data.datasets[1].label  
         = 'total deaths';
+      chartData.data.datasets[2].label  
+        = 'total cases per 100000';
       chartData.data.labels  
         = newConfirmedOver1000.map( (x) => x.Slug );
       chartData.data.datasets[0].data  
@@ -161,6 +169,9 @@ function loadContent() {
       chartData.data.datasets[1].data  
         = newConfirmedOver1000.map( 
           (x) => x.TotalDeaths );
+      chartData.data.datasets[2].data  
+        = newConfirmedOver1000.map( 
+          (x) => x.TotalCasesPer100k );
       chartData.options.title.text 
         = "Covid 19 Hotspots (" + 
         dayjs().format("MM-DD-YYYY") + ")" ;
