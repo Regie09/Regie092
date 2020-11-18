@@ -3,7 +3,7 @@
 
 <head>
 	<!-- Bootstrap CSS -->
-	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css' />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	
 <style>
 	nav {text-align: center;}
@@ -18,11 +18,22 @@
 	</nav>
 <br>	
 	
-<h2>Example Chart using Chart.js</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+      <h2>Example Chart using Chart.js</h2>
 <canvas id="myChart"></canvas>
 
 <h2>Example AJAX call to Covid19api</h2>
-<button type="button" onclick="loadContent()">Load Covid-19 Content</button>
+  <button type="button" onclick="loadContent()">Load Covid-19 Content</button>
+    </div>
+    
+    <div class="col-md-3">
+      <h3>Covid 19</h3>
+      <p>COVID-19 is caused by a coronavirus called SARS-CoV-2. Older adults and people who have severe underlying medical conditions like heart or lung disease or diabetes seem to be at higher risk for developing more serious complications from COVID-19 illness. <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html">(CDC)</a><p>
+    </div>
+  </div>
+</div>
 
 
 <!-- ChartJS: https://www.chartjs.org/ -->
