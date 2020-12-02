@@ -201,7 +201,7 @@ let toMoney = (value) => {
 };
 
 // -------------------------------------------------------
-//it puts it in local storage of that device
+//it saves it in local storage of that device
 let saveForm = () => {
   localStorage.setItem(`as06`, JSON.stringify(loans));
 };
@@ -224,7 +224,7 @@ let loadForm = () => {
 function loadDoc() {
   // pre-fill defaults for first loan year
   var defaultYear = loans[0].loan_year; //pre filling the default year in the first year. Its declaring and initializing
-  $("#loan_year0" + 1).val(defaultYear++); //Jquery selector, Increments default year  in the first line
+  $("#loan_year0" + 1).val(defaultYear++); //Jquery selector, Increments default year in the first line
   var defaultLoanAmount = loans[0].loan_amount;
   $("#loan_amt0" + 1).val(defaultLoanAmount.toFixed(2)); //Jquery selector, setting default loan amount in first line
   var defaultInterestRate = loans[0].loan_int_rate;
